@@ -1,0 +1,9 @@
+name: 'instruqt-converter-action'
+description: 'Converts instruqt track between versions'
+author: 'Nick Thompson'
+branding:
+  icon: 'tool'
+  color: 'blue'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
