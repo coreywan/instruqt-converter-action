@@ -2,7 +2,7 @@ name: 'instruqt-converter-action'
 description: 'Converts instruqt track between versions'
 author: 'Nick Thompson'
 branding:
-  icon: 'tool'
+  icon: 'tag'
   color: 'blue'
 runs:
   using: 'docker'
