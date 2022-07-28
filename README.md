@@ -45,7 +45,7 @@ jobs:
           instruqt track validate
 
       - name: Convert to dev
-        uses: nsthompson/instruqt-converter-action@v1.1
+        uses: nsthompson/instruqt-converter-action@v1.2
         env:
           CONVERT_TO: 'dev'
           # IDENTIFIER: - Use to override default IDENTIFIER of dev
