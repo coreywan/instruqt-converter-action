@@ -7,11 +7,8 @@ RUN apt-get -y upgrade
 # Install Packages
 RUN apt-get -y install git gcc libyaml-dev
 
-# Clone Repository
-RUN git clone https://github.com/nsthompson/instruqt-converter /instruqt-converter
-
-# Install requirements
-RUN pip install --no-cache-dir -r /instruqt-converter/requirements.txt
+# Install Instruqt Converter
+RUN pip install --no-cache-dir instruqt-converter
 
 # Copy Entrypoint In
 COPY entrypoint.sh /
