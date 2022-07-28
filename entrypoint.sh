@@ -30,4 +30,4 @@ if [ -z "$INSTRUQT_API_URL" ]; then
 fi
 
 # Convert the track
-python3 /instruqt-converter/convert.py --track ${GITHUB_WORKSPACE} --to ${CONVERT_TO} --identifier ${IDENTIFIER}
+convert --track ${GITHUB_WORKSPACE} --to ${CONVERT_TO} --identifier ${IDENTIFIER}
