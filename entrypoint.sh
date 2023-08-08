@@ -4,6 +4,14 @@ set -eo pipefail
 
 # Check Configuration
 
+if [ -z "$WORKING_DIRECTORY" ]; then
+    TRACK_LOCATION="${GITHUB_WORKSPACE}"
+    echo "info: WORKING_DIRECTORY is not set. We are going to set the track location to ${TRACK_LOCATION}"
+else
+    TRACK_LOCATION="${GITHUB_WORKSPACE}/${WORKING_DIRECTORY}"
+    echo "info: WORKING_DIRECTORY was set. We are going to set the track location to ${TRACK_LOCATION}"
+fi
+
 if [ -z "$CONVERT_TO" ]; then
     echo "error: CONVERT_TO is not set to either prod or dev"
     exit 1
@@ -30,4 +38,4 @@ if [ -z "$INSTRUQT_API_URL" ]; then
 fi
 
 # Convert the track
-convert --track ${GITHUB_WORKSPACE} --to ${CONVERT_TO} --identifier ${IDENTIFIER}
+convert --track ${TRACK_LOCATION} --to ${CONVERT_TO} --identifier ${IDENTIFIER}
