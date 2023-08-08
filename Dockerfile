@@ -8,7 +8,8 @@ RUN apt-get -y upgrade
 RUN apt-get -y install git gcc libyaml-dev
 
 # Install Instruqt Converter
-RUN pip install --no-cache-dir instruqt-converter
+#RUN pip install --no-cache-dir instruqt-converter
+RUN pip install --no-cache-dir git+https://github.com/coreywan/instruqt-converter@dev-logging
 
 # Copy Entrypoint In
 COPY entrypoint.sh /
